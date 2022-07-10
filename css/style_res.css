@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+@media (max-width: 1199px){
+    section{
+        height: 100%;
+    }
+    #about, #skill, #contact{
+        height: 100vh;
+    }
+    #about .wrap{
+        width: 100%; 
+    }
+    #about .wrap .imgPart{
+        width: 30%; height: auto;
+    }
+    #about .wrap .txtPart{
+        width: 60%; height: auto;
+    }
+
+    #skill .wrap{
+        width: 100%;
+    }
+
+    #portfolio .wrap{
+        width: 100%;
+    }
+    #portfolio .wrap .slideBox{
+        width: 80%;
+    }
+}
+@media (max-width: 767px){
+    /* header .menu ul{
+        display: none;
+    } */
+
+    header .menu{        
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.75);
+        z-index: -1; opacity: 0;
+    }
+    header .menu.active{
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    header .menu ul{
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .menu ul li{
+        margin:2vh 0;
+        border-right: none;
+    }
+    header .menu ul li a{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    header .resBtn{display: block;}
+
+    #about{
+        height: 100%;
+    }
+    #about .wrap{
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 0;
+    }
+    #about .wrap .txtPart {
+        width: 100%;
+        padding-top: 50px;
+    }
+    #about .wrap .txtPart ul li {
+        flex-direction: column;
+    }
+    #about .wrap .txtPart ul li ul{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #skill .wrap{
+        padding: 50px 0;
+    }
+}
+@media (max-width: 567px){
+    main h2{
+        left: 30%;
+    }
+
+    #about .wrap .imgPart {
+        width: 50%;
+    }
+    #about .wrap .txtPart {
+        width: 90%;
+    }   
+
+    #portfolio .wrap .slideBox .innerBox .cont .imgPart{
+        width: 60%;
+    }
+    #portfolio .wrap .slideBox .innerBox .cont .txtPart{
+        width: 60%;
+    }
+
+    #portfolio .wrap .slideBox .innerBox .cont .txtPart .bottom .detail_btn a{
+        margin-bottom: 20px;
+        width: 70px; height: 20px;
+        font-size: 14px;
+        line-height: 1;
+    }
+}

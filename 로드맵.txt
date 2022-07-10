@@ -1,0 +1,11 @@
+main - 
+
+About - 자기소개
+Skill - svg 활용한 기술적 부분  HTML5 css3 javascript jqury vue php
+Portfolio - 포트폴리오 링크 첨부, 설명, 어떤 기술썻는지
+Contact - 메일 넣기
+
+
+
+vue이용하여 케이스 제작
+
