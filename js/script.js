@@ -51,6 +51,9 @@ const pageAbout = {
                                                         
                     현재 퍼블리셔의 세계에 가기 위해 한 걸음을 막 내딪은 상태입니다. 
                     하지만 이 한 걸음이 수많은 경험으로 가는 위대한 시작이 될 것입니다.
+
+                    주로 사용하는 것은 <span>"HTML5", "CSS3", "Javscript", "jQuery"</span>이며
+                    "PHP"와 "Vue"는 지식만 가지고 있는 정도입니다.
                     </p>
 
 
@@ -87,10 +90,10 @@ const pageSkill = {
         return {skillPer: [
             ["HTML5", "90"],
             ["CSS3", "85"],
-            ["Javascript", "80"],
+            ["Javascript", "85"],
             ["jQuery", "80"],
-            ["Vue", "66"],
-            ["PHP", "61"],
+            ["Vue", "55"],
+            ["PHP", "50"],
         ]};
     },
     template: `

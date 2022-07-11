@@ -172,6 +172,10 @@ section{
     word-break: keep-all;
     padding-bottom: 40px;
 }
+#about .wrap .txtPart p span{
+    color: red;
+    text-shadow: 1px 1px 1px #460001;
+}
 
 #about .wrap .txtPart h4{
     font-size: 20px;
