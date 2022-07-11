@@ -126,3 +126,14 @@
     
     #skill{height: 100%;}
 }
+
+
+
+
+@media (max-height: 899px){
+    #portfolio, #contact{height: 100%;}
+}
+
+@media (max-height: 649px){
+    #about, #skill{height: 100%;}
+}
