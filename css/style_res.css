@@ -105,7 +105,7 @@
     }   
 
     #portfolio .wrap .slideBox .innerBox .cont .imgPart{
-        width: 60%;
+        width: 60%; height: 30%;
     }
     #portfolio .wrap .slideBox .innerBox .cont .txtPart{
         width: 60%;
