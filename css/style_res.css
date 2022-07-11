@@ -27,6 +27,10 @@
     #portfolio .wrap .slideBox{
         width: 80%;
     }
+
+    #contact{
+        margin: 50px auto;
+    }
 }
 @media (max-width: 767px){
     /* header .menu ul{
