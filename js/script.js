@@ -166,7 +166,7 @@ const pagePortfolio ={
                                     <h2>{{list[1]}}</h2>
                                     <ul>
                                         <li  v-for="lang in list[2]">
-                                            <img :src="'./img/'+lang+'.png'">
+                                            <img :src="'./img/'+lang+'.png'" :title="lang" :alt="lang">
                                         </li>
                                     </ul>
                                 </div>
