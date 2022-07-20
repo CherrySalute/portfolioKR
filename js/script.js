@@ -49,7 +49,7 @@ const pageAbout = {
                     <h2>About me</h2>                                       
                     <p style="white-space: pre-line;">배움을 즐기면서 경험치를 얻고 있는 "김경래" 입니다.
                                                         
-                    현재 퍼블리셔의 세계에 가기 위해 한 걸음을 막 내딪은 상태입니다. 
+                    현재 퍼블리셔의 세계에 가기 위해 한 걸음을 막 내딛은 상태입니다. 
                     하지만 이 한 걸음이 수많은 경험으로 가는 위대한 시작이 될 것입니다.
 
                     주로 사용하는 것은 <span>"HTML5", "CSS3", "Javscript", "jQuery"</span>이며
@@ -92,8 +92,8 @@ const pageSkill = {
             ["CSS3", "85"],
             ["Javascript", "85"],
             ["jQuery", "80"],
-            ["Vue", "55"],
-            ["PHP", "50"],
+            ["Vue", "45"],
+            ["PHP", "40"],
         ]};
     },
     template: `
