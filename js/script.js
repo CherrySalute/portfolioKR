@@ -1,7 +1,7 @@
 Vue.component("header-el",{
     data: () => {
         return {menuList: [
-            "about", "skill", "portfolio", "contact"
+            "about","carrer" ,"skill", "portfolio", "contact"
         ]}
     },
     template: `
@@ -46,40 +46,40 @@ const pageAbout = {
                     <img src="./img/image1.jpg" alt="">
                 </div>
                 <div class="txtPart">
-                    <h2>About me</h2>                                       
-                    <p style="white-space: pre-line;">배움을 즐기면서 경험치를 얻고 있는 "김경래" 입니다.
-                                                        
-                    현재 퍼블리셔의 세계에 가기 위해 한 걸음을 막 내딛은 상태입니다. 
-                    하지만 이 한 걸음이 수많은 경험으로 가는 위대한 시작이 될 것입니다.
+                    <h2>I am</h2>                                       
+                    <p style="white-space: pre-line;">
+                    퍼블리셔 2년차 김경래입니다.
+                    
+                    　평소에 봐오던 웹페이지를 직접 만들고 상용화 시킬수 있다는 것이 흥미를 느껴 웹퍼블리싱을 배우게 되었습니다. 쉬울것만 같았던 페이지들이 각 구조를 이루고 효율적으로 배치를 하기 위해 많은 노력이 필요하다는 것을 배움을 통해 깨닫게 되었습니다.
+                    　현재는 웹퍼블리싱 만으로는 힘들다 생각하여 Front-End 개발자로 가기 위한 공부를 열심히 진행하고 있습니다. Framework중에서 러닝 커브가 낮은 Vue.js를 공부하며 열심히 내공을 쌓고있습니다.
 
-                    주로 사용하는 것은 <span>"HTML5", "CSS3", "Javscript", "jQuery"</span>이며
-                    "PHP"와 "Vue"는 지식만 가지고 있는 정도입니다.
+                    실무에서는 카페24를 통해 기존에 제작된 사이트의 유지보수 및 신규 브랜드 런칭을 위한 사이트 제작에 참여했습니다.
                     </p>
-
-
-                    <ul>
-                        <li>
-                            <ul>
-                                <h4>교육수료</h4>
-                                <li> - (스마트웹&콘텐츠 개발) UI/UX 적응형,반응형 웹디자인&웹퍼블리셔 과정</li>
-                            </ul>                    
-                            <ul>
-                                <h4>경력사항</h4>
-                                <li> - 한국호텔관광 전문학교 호텔제과제빵학 전공</li>
-                                <li> - 윤쉐프 정직한제빵소 양주점</li>                    
-                                <li> - 식빵전문점 밀도 노원점</li>                    
-                                <li> - 뺑오르방 광교점</li>                    
-                            </ul>
-                        </li>
-                     </ul>
                 </div>                           
             </div> 
             <div class="btnPart">
                 <a href="https://github.com/CherrySalute">
                     <img src="./img/github-brands.svg" alt="">  
-                    <span>깃허브 바로가기</span> 
+                    <span>I am GitHub</span> 
                 </a>  
             </div>         
+        </section>
+    `
+}
+
+const pageCarrer = {    
+    template: `
+        <section id="carrer">
+            <div class="wrap">
+                <div class="title">
+                    <h2>Carrer</h2>
+                </div>    
+                <div class="rental">
+                    <div class="dark_border"></div>
+                    <div class="dark_bg"></div>                        
+                    <p>(주)렌탈프랜드<br>2022.08.08 ~ </p>
+                </div>
+            </div>
         </section>
     `
 }
@@ -87,41 +87,25 @@ const pageAbout = {
 
 const pageSkill = {
     data: () => {
-        return {skillPer: [
+        return {skill: [
             ["HTML5", "90"],
             ["CSS3", "85"],
             ["Javascript", "85"],
             ["jQuery", "80"],
             ["Vue", "45"],
-            ["PHP", "40"],
         ]};
     },
     template: `
         <section id="skill">
             <div class="wrap">
-                <h1>Skill</h1>
-                <div class="frame" >
-
-                    <div class="box" v-for="list in skillPer">
-                        <div class="cont">
-                            <div class="top">
-                                <svg>
-                                    <circle cx="70" cy="70" r="70" />
-                                    <circle cx="70" cy="70" r="70" />
-                                </svg>
-                                <div class="num">
-                                    <h2>
-                                        <span class="count" :data-limit="list[1]">0</span>
-                                        <span>%</span>
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="bottom">
-                                <h2 class="cont_text">{{list[0]}}</h2>
-                            </div>
-                        </div>
-                    </div>                
-
+                <div class="title">
+                    <h2>Skill</h2>
+                </div>               
+                <div class="skillBox">
+                    <div v-for="list in skill">
+                        <p>{{list[0]}}</p>
+                        <progress :value="list[1]" max="100"></progress>
+                    </div>
                 </div>
             </div>
         </section>
@@ -144,10 +128,6 @@ const pagePortfolio ={
             ["weather.png","weatherApp",["html5","css3", "javascript","jQuery","ajax"], "Ajax를 사용하여 외부의 날씨정보를 받아서 표현해낸 날씨정보제공 사이트", "https://cherrysalute.github.io/weatherApp/"],
 
             ["audition_vue.png","Film Maker",["html5","css3","javascript","jQuery","vue"], "Vue Component를 사용하여 전체적인 사이트의 구조를 잡은 Film Maker 영화 오디션 사이트", "https://cherrysalute.github.io/filmmaker/"],
-
-            ["chat.png","My chat",["html5","css3","javascript","jQuery","Firebase","php","mysql"], "Firbase를 사용하여 실시간 채팅을 관리하고 사용자의 정보를 데이터베이스에 담아 관리하고 서버를 통해 이용할 수있는 채팅앱 사이트", "http://moiraz.dothome.co.kr/chattingApp/"],
-            ["oclass.png","OClass",["html5","css3","javascript","jQuery","php","mysql"], "PHP를 활용하여 데이터베이스에 온라인클래스의 정보와 사용자의 정보를 담아 서버에서 관리하고, 온라인 쇼핑의 기능을 구현한 온라인클래스 강의사이트", "http://moiraz.dothome.co.kr/oclass/"],
-            ["capricornus.png","Capricornus",["html5","css3","jQuery","php","mysql"], "PHP와 MySql를 중심으로 데이터베이스를 MySql에 담아 관리할 수 있는 기능을 담은 베이커리 카페의 브랜드와 제품등을 소개하는 베이커리 카페 사이트", "http://moirax.dothome.co.kr/capricornus/"],
         ]};
 
         
@@ -251,6 +231,10 @@ const rtRoutes = [
     {
         path: "/about",
         component: pageAbout
+    },
+    {
+        path: "/carrer",
+        component: pageCarrer
     },
     {
         path: "/skill",
