@@ -156,7 +156,7 @@ const pagePortfolio ={
                     <div class="innerBox">
 
                         <div class="cont" v-for="list in portArr">
-                            <div class="imgPart" :style="'background-image:url(/img/logo/'+list[0]+')'"></div>
+                            <div class="imgPart" :style="'background-image:url(./img/logo/'+list[0]+')'"></div>
                             <div class="txtPart">
                                 <div class="top">
                                     <h2>{{list[1]}}</h2>
