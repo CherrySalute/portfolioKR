@@ -1,42 +1,36 @@
 @charset "utf-8";
 
 @media (max-width: 1199px){
-    section{
-        height: 100%;
-    }
-    #about, #skill, #contact{
-        height: 100vh;
-    }
-    #about .wrap{
+  
+    
+    #about .wrap, 
+    #carrer .wrap, 
+    #skill .wrap, 
+    #portfolio .wrap
+    {
         width: 100%; 
     }
+    #rental .wrap,
+    #allnego .wrap,
+    #niccier .wrap,
+    #roxtimer .wrap{
+        width: 90%;
+    }
+
     #about .wrap .imgPart{
         width: 30%; height: auto;
     }
     #about .wrap .txtPart{
         width: 60%; height: auto;
     }
-
-    #skill .wrap{
-        width: 100%;
-    }
-
-    #portfolio .wrap{
-        width: 100%;
-    }
+   
     #portfolio .wrap .slideBox{
         width: 80%;
     }
 
-    #contact{
-        margin: 50px auto;
-    }
+    
 }
 @media (max-width: 767px){
-    /* header .menu ul{
-        display: none;
-    } */
-
     header .menu{        
         position: absolute;
         top: 50px;
@@ -92,6 +86,35 @@
     #skill .wrap{
         padding: 50px 0;
     }
+
+
+    .wrap .title{
+        font-size: 36px;
+        padding-bottom: 20px;
+    }
+    
+    #rental .wrap .textPart, 
+    #rental .wrap .viewPart,
+    #allnego .wrap .textPart, 
+    #allnego .wrap .viewPart,
+    #niccier .wrap .textPart, 
+    #niccier .wrap .viewPart,
+    #roxtimer .wrap .textPart, 
+    #roxtimer .wrap .viewPart{
+        flex-direction: column;
+    }
+    #rental .wrap .textPart p, 
+    #rental .wrap .viewPart p,
+    #allnego .wrap .textPart p, 
+    #allnego .wrap .viewPart p,
+    #niccier .wrap .textPart p, 
+    #niccier .wrap .viewPart p,
+    #roxtimer .wrap .textPart p, 
+    #roxtimer .wrap .viewPart p{
+        margin-bottom: 10px;
+    } 
+
+
 }
 @media (max-width: 567px){
     main h2{
@@ -105,7 +128,9 @@
         width: 90%;
     }   
 
-
+    #skill .skillBox{
+        width: 90%;
+    }
 
     #portfolio .wrap .slideBox .innerBox .cont .imgPart{
         width: 60%; height: 30%;
@@ -122,9 +147,16 @@
     }
 }
 
-@media (max-width: 479px){
-    
-    #skill{height: 100%;}
+@media (max-width: 400px){
+    #carrer .wrap .carrerbox{
+        width: 90%;
+    }
+    #carrer .wrap .carrerbox > div{
+        height: 200px;
+    }
+    #carrer .wrap .else{
+        width: 80%;
+    }
 }
 
 

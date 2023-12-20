@@ -74,10 +74,19 @@ const pageCarrer = {
                 <div class="title">
                     <h2>Carrer</h2>
                 </div>    
-                <div class="rental">
-                    <div class="dark_border"></div>
-                    <div class="dark_bg"></div>                        
-                    <p>(주)렌탈프랜드<br>2022.08.08 ~ </p>
+                <div class="carrerbox">
+                    <div class="rental">
+                        <div class="dark_border"></div>
+                        <div class="dark_bg"></div>                        
+                        <p>(주)렌탈프랜드<br>2022.08.08 ~ ing</p>
+                    </div>
+                </div>                
+                <div class="else">
+                    <h6>기타 경력사항</h6>
+                    <li> 한국호텔관광 전문학교 호텔제과제빵학 전공</li>
+                    <li> 뺑오르방 광교점</li>  
+                    <li> 식빵전문점 밀도 노원점</li>   
+                    <li> 윤쉐프 정직한제빵소 양주점</li>                  
                 </div>
             </div>
         </section>
@@ -103,7 +112,7 @@ const pageSkill = {
                 </div>               
                 <div class="skillBox">
                     <div v-for="list in skill">
-                        <p>{{list[0]}}</p>
+                        <p>{{list[0]}} / {{list[1]}}%</p>
                         <progress :value="list[1]" max="100"></progress>
                     </div>
                 </div>
@@ -116,7 +125,11 @@ const pageSkill = {
 const pagePortfolio ={
     data: () => {
         return {portArr: [
-            ["kuliner.png","Kuliner", ["html5", "css3"], "HTML과 CSS를 사용한 기본적인 음식점 사이트", "https://cherrysalute.github.io/exam_kuliner_2022/"],
+            ["rentalfriend.png","Rentalfriend",["html5","css3","jQuery"],"사이트 유지보수 및 관리 (2022.08~ing)","rentalfriend"],
+            ["allnego.png","Allnego",["html5","css3","jQuery"],"사이트 유지보수 및 관리 (2022.08~ing)","allnego"],
+            ["niccier.png","Niccier",["html5","css3","jQuery"],"사이트 퍼블리싱 및 유지보수 (2022.10~ing)","niccier"],
+            ["roxboss.png","Rox Boss Timer",["html5","css3","javascript"],"[개인사용용도] 사이트 디자인, 제작","roxtimer"]
+            /*["kuliner.png","Kuliner", ["html5", "css3"], "HTML과 CSS를 사용한 기본적인 음식점 사이트", "https://cherrysalute.github.io/exam_kuliner_2022/"],
             ["cakehouse.png","Cakehouse",["html5","css3"], "HTML과 CSS를 사용한 기본적인 제과점 사이트", "https://cherrysalute.github.io/20220331_website_cakehouse/"],
             ["cashmere.png","Cashmere",["html5","css3"], "HTML과 CSS를 사용한 기본적인 의류브랜드 사이트", "https://cherrysalute.github.io/cashmere/"],
             ["bnostore.png","B&O",["html5","css3"], "HTML과 CSS를 사용한 기본적인 음향기기 판매 사이트", "https://cherrysalute.github.io/Bno/"],
@@ -127,7 +140,7 @@ const pagePortfolio ={
             ["wedding.png","Aisel Wedding",["html5","css3"], "HTML과 CSS를 사용한 기본적인 웨딩사업 사이트", "https://cherrysalute.github.io/wedding-site/"],
             ["weather.png","weatherApp",["html5","css3", "javascript","jQuery","ajax"], "Ajax를 사용하여 외부의 날씨정보를 받아서 표현해낸 날씨정보제공 사이트", "https://cherrysalute.github.io/weatherApp/"],
 
-            ["audition_vue.png","Film Maker",["html5","css3","javascript","jQuery","vue"], "Vue Component를 사용하여 전체적인 사이트의 구조를 잡은 Film Maker 영화 오디션 사이트", "https://cherrysalute.github.io/filmmaker/"],
+            ["audition_vue.png","Film Maker",["html5","css3","javascript","jQuery","vue"], "Vue Component를 사용하여 전체적인 사이트의 구조를 잡은 Film Maker 영화 오디션 사이트", "https://cherrysalute.github.io/filmmaker/"],*/
         ]};
 
         
@@ -143,7 +156,7 @@ const pagePortfolio ={
                     <div class="innerBox">
 
                         <div class="cont" v-for="list in portArr">
-                            <div class="imgPart" :style="'background-image:url(./img/view/'+list[0]+')'"></div>
+                            <div class="imgPart" :style="'background-image:url(/img/logo/'+list[0]+')'"></div>
                             <div class="txtPart">
                                 <div class="top">
                                     <h2>{{list[1]}}</h2>
@@ -156,7 +169,7 @@ const pagePortfolio ={
                                 <div class="bottom">
                                     <p>{{list[3]}}</p>
                                     <div class="detail_btn">
-                                        <a :href="list[4]">Click</a>
+                                    <router-link :to="'/portfolio/'+list[4]">Click</router-link>
                                     </div>
                                 </div>
                             </div>
@@ -177,52 +190,193 @@ const pagePortfolio ={
 const pageContact = {
     template: `
         <section id="contact">
-            <h2>Contact</h2>
-            <form class="gform form-elements" name="contactUs" method="post" action="https://script.google.com/macros/s/AKfycbzs1Sju1_JK-57YS5hzEYFUr3-BDhmae4ZzvXW5/exec">
-                <fieldset>
-                    <legend>Mail</legend>
-                    <div class="formlist">
-                        <ul>
-                            <li>
-                                <label for="name">이름 또는 회사명<sup>*</sup></label>
-                                <span class="inputBox">
-                                    <input type="text" id="name" name="name" placeholder="이름 또는 회사명을 입력해주세요." required autocomplete="off">
-                                </span>
-                            </li>
-                            <li>
-                                <label for="email">답변받을 이메일<sup>*</sup></label>
-                                <span class="inputBox">
-                                    <input type="text" id="email" name="email" placeholder="sample@mail.com" required autocomplete="off">
-                                </span>
-                            </li>
-                            <li>
-                                <label for="message">문의 내용<sup>*</sup></label>
-                                <span class="inputBox">
-                                    <textarea name="message" id="message" placeholder="문의 사항을 입력해 주세요." required autocomplete="off"></textarea>
-                                </span>
-                            </li>
-                        </ul>
-                        <div class="btn_box">
-                            <button type="submit" class="command_btn">문의하기</button>
-                        </div>
-                    </div>
-                    <div class="thankyou_message">
-                        <article>
-                            <h1>작성된 내용이 모두 전송되었습니다.</h1>
-                            <p>메일 확인 후 연락 드리겠습니다.</p>
+            <div class="wrap">
+                <div class="title">
+                    <h2>Contact</h2>
+                </div>                
+                <form class="gform form-elements" name="contactUs" method="post" action="https://script.google.com/macros/s/AKfycbzs1Sju1_JK-57YS5hzEYFUr3-BDhmae4ZzvXW5/exec">
+                    <fieldset>
+                        <legend>Mail</legend>
+                        <div class="formlist">
+                            <ul>
+                                <li>
+                                    <label for="name">이름 또는 회사명<sup>*</sup></label>
+                                    <span class="inputBox">
+                                        <input type="text" id="name" name="name" placeholder="이름 또는 회사명을 입력해주세요." required autocomplete="off">
+                                    </span>
+                                </li>
+                                <li>
+                                    <label for="email">답변받을 이메일<sup>*</sup></label>
+                                    <span class="inputBox">
+                                        <input type="text" id="email" name="email" placeholder="sample@mail.com" required autocomplete="off">
+                                    </span>
+                                </li>
+                                <li>
+                                    <label for="message">문의 내용<sup>*</sup></label>
+                                    <span class="inputBox">
+                                        <textarea name="message" id="message" placeholder="문의 사항을 입력해 주세요." required autocomplete="off"></textarea>
+                                    </span>
+                                </li>
+                            </ul>
                             <div class="btn_box">
-                                <a href="" class="close">닫기</a>
+                                <button type="submit" class="command_btn">문의하기</button>
                             </div>
-                        </article>
-                    </div>
-                </fieldset>
-            </form>
-            <span class="comment">작성하신 내용은 메일로 전송됩니다.</span>
+                        </div>
+                        <div class="thankyou_message">
+                            <article>
+                                <h1>작성된 내용이 모두 전송되었습니다.</h1>
+                                <p>메일 확인 후 연락 드리겠습니다.</p>
+                                <div class="btn_box">
+                                    <a href="" class="close">닫기</a>
+                                </div>
+                            </article>
+                        </div>
+                    </fieldset>
+                </form>
+                <span class="comment">작성하신 내용은 메일로 전송됩니다.</span>
+            </div>
         </section>
     `
 }
 
-
+const portfolio_rental = {
+    template: `
+        <section id="rental">
+            <div class="wrap">
+                <div class="title">
+                    <h2>Rentalfriend</h2>
+                </div>     
+                <div class="textPart">
+                    <p>Info</p>
+                    <div class="list">
+                        <dl>
+                            <dt>개발 언어</dt>
+                            <dd>html, css, jQuery, javascript</dd>
+                        </dl>
+                        <dl>
+                            <dt>링크</dt>
+                            <dd><a href="https://rentalfriend.co.kr/">https://rentalfriend.co.kr/</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>담당 업무</dt>
+                            <div>
+                                <dd> 사이트 유지보수</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="viewPart">
+                    <p>Page</p>
+                    <iframe src="https://rentalfriend.co.kr/" width="100%" height="400px"></iframe>
+                </div>
+            </div>
+        </section>
+    `
+}
+const portfolio_allnego = {
+    template: `
+        <section id="allnego">
+            <div class="wrap">
+                <div class="title">
+                    <h2>Allnego</h2>
+                </div>     
+                <div class="textPart">
+                    <p>Info</p>
+                    <div class="list">
+                        <dl>
+                            <dt>개발 언어</dt>
+                            <dd>html, css, jQuery, javascript</dd>
+                        </dl>
+                        <dl>
+                            <dt>링크</dt>
+                            <dd><a href="https://www.allnego.com/">https://www.allnego.com/</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>담당 업무</dt>
+                            <div>
+                                <dd> 사이트 유지보수</dd>
+                                <dd> 퍼블리싱 40% (메인페이지 리뉴얼, 검색기능 추가)</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="viewPart">
+                    <p>Page</p>
+                    <iframe src="https://www.allnego.com/" width="100%" height="400px"></iframe>
+                </div>
+            </div>
+        </section>
+    `
+}
+const portfolio_niccier = {
+    template: `
+        <section id="niccier">
+            <div class="wrap">
+                <div class="title">
+                    <h2>Niccier</h2>
+                </div>     
+                <div class="textPart">
+                    <p>Info</p>
+                    <div class="list">
+                        <dl>
+                            <dt>개발 언어</dt>
+                            <dd>html, css, jQuery, javascript</dd>
+                        </dl>
+                        <dl>
+                            <dt>링크</dt>
+                            <dd><a href="https://niccier.com/">https://niccier.com/</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>담당 업무</dt>
+                            <div>
+                                <dd> 사이트 유지보수</dd>
+                                <dd> 퍼블리싱 100%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="viewPart">
+                    <p>Page</p>
+                    <iframe src="https://niccier.com/" width="100%" height="400px"></iframe>
+                </div>
+            </div>
+        </section>
+    `
+}
+const portfolio_roxtimer={
+    template:`
+        <section id="roxtimer">
+            <div class="wrap">
+                <div class="title">
+                    <h2>Rox Boss Timer</h2>
+                </div>     
+                <div class="textPart">
+                    <p>Info</p>
+                    <div class="list">
+                        <dl>
+                            <dt>개발 언어</dt>
+                            <dd>html, css, javascript</dd>
+                        </dl>
+                        <dl>
+                            <dt>링크</dt>
+                            <dd><a href="https://roxbosstime.netlify.app/">https://roxbosstime.netlify.app/</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>담당 업무</dt>
+                            <div>
+                                <dd> 퍼블리싱 100%</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="viewPart">
+                    <p>Page</p>
+                    <iframe src="https://roxbosstime.netlify.app/" width="100%" height="400px"></iframe>
+                </div>
+            </div>
+        </section>
+    `
+}
 const rtRoutes = [
     {
         path: "/",
@@ -247,7 +401,23 @@ const rtRoutes = [
     {
         path: "/contact",
         component: pageContact
-    }
+    },
+    {
+        path: "/portfolio/rentalfriend",
+        component: portfolio_rental
+    },
+    {
+        path: "/portfolio/allnego",
+        component: portfolio_allnego
+    },
+    {
+        path: "/portfolio/niccier",
+        component: portfolio_niccier
+    },
+    {
+        path: "/portfolio/roxtimer",
+        component: portfolio_roxtimer
+    },
 ]
 
 

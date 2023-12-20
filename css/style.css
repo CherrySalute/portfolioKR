@@ -46,6 +46,7 @@ header .menu ul li a{
     color: white;
     font-size: 18px;
     text-transform: uppercase;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 header .menu ul li a:hover{
     color: red;
@@ -129,6 +130,7 @@ main h2{
 section{
     width: 100%; height: calc(100vh - 100px);
 }
+.wrap .title{padding-bottom: 40px;}
 
 /* about */
 #about{
@@ -229,17 +231,23 @@ section{
 #carrer .wrap h2{
     font-family: 'Edu VIC WA NT Beginner', cursive;
     font-size: 64px;
-    padding-bottom: 30px;
     color: white;
 }
+#carrer .wrap .carrerbox{
+    width: 400px; 
+}
 #carrer .wrap .rental{
-    width: 400px; height: 250px;
-    background-color: lightgray;
+    width: 100%; height: 250px;
+    background-color: white;
+    background-image: url(/img/logo/rentalfriend.png);
+    background-size: contain;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #carrer .wrap .rental .dark_bg{
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     position: absolute;
     top: 0; left: 0;
@@ -274,6 +282,8 @@ section{
 #carrer .wrap .rental p{
     color: white;
     font-size: 14px;
+    line-height: 24px;
+    text-align: center;
     opacity: 0;
     position: absolute;
     top: 50%; left: 50%;
@@ -307,6 +317,18 @@ section{
 
 }
 
+#carrer .wrap .else{
+    margin-top: 50px;
+    color: white;
+}
+#carrer .wrap .else h6{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#carrer .wrap .else li{
+    margin:5px 0;
+    font-size: 14px;
+}
 
 /* skill */
 #skill .wrap{
@@ -324,20 +346,21 @@ section{
     color: #fff;
     font-family: 'Edu VIC WA NT Beginner', cursive;
 }
-#skill .skillBox{
-    
-}
 #skill p{
-    margin: 10px 0;
+    margin: 20px 0;
     padding-left: 10px;
     color: white;
     font-family: 'Edu VIC WA NT Beginner', cursive;
 }
-#skill progress{
-    appearance: none;
+#skill .skillBox{
     width: 500px;
 }
-#skill progress::-webkit-progress-bar{
+#skill progress[value]{
+    appearance: none;
+    width: 100%;
+
+}
+#skill progress[value]::-webkit-progress-bar{
     background: #f0f0f0;
     border: 1px solid #eee;
     border-radius: 30px;
@@ -345,10 +368,12 @@ section{
     height: 30px;
     overflow: hidden;
 }
-#skill progress::-webkit-progress-value{
+#skill progress[value]::-webkit-progress-value{
     background: lightcoral;
-    border-radius: 0px;
+    border-radius: 0px;  
 }
+
+
 
 /* portfolio */
 #portfolio .wrap{
@@ -405,14 +430,14 @@ section{
 
 
 #portfolio .wrap .slideBox .innerBox{
-    width: 1100%; height: 100%;
+    width: 400%; height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left:-100%;
 }
 #portfolio .wrap .slideBox .innerBox .cont{
-    width: calc(100% / 11); height: 100%;
+    width: calc(100% / 4); height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -421,19 +446,17 @@ section{
     border-radius: 10px;
 }
 #portfolio .wrap .slideBox .innerBox .cont .imgPart{
-    width: 400px; height: 300px;
+    width: 400px; height: 250px;
     margin-bottom: 20px;
     background-color: #fff;
 
-    background-size: 100% auto;
-    background-position: 50% 0;
-    transition: background-position 15s linear;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
 
-    border-radius: 1px solid #fff;
+    border-radius: 10px;
 }
-#portfolio .wrap .slideBox .innerBox:hover .cont .imgPart{
-    background-position: 50% 100%;
-}
+
 #portfolio .wrap .slideBox .innerBox .cont .txtPart{
     width: 500px;
 }
@@ -491,6 +514,166 @@ section{
 
 
 
+/* portfolio_rental */
+#rental .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#rental .wrap .title h2{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 60px;
+    color: white;
+}
+#rental .wrap .textPart,
+#rental .wrap .viewPart {
+    color: white;
+    display: flex;
+}
+#rental .wrap .textPart p,
+#rental .wrap .viewPart p{
+    font-weight: bold;
+    margin-right: 40px;
+}
+#rental .wrap .textPart dl{
+    margin: 0 0 10px 0;
+    display: flex;
+}
+#rental .wrap .textPart dt{
+    width: 100px;
+}
+#rental .wrap .textPart dd a{
+    color: white;
+}
+#rental .wrap .viewPart {
+    margin-top: 20px;
+}
+#rental .wrap .viewPart p{
+    margin-right: 40px;
+}
+
+/* portfolio_allnego*/
+#allnego .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#allnego .wrap .title h2{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 60px;
+    color: white;
+}
+#allnego .wrap .textPart,
+#allnego .wrap .viewPart {
+    color: white;
+    display: flex;
+}
+#allnego .wrap .textPart p,
+#allnego .wrap .viewPart p{
+    font-weight: bold;
+    margin-right: 40px;
+}
+#allnego .wrap .textPart dl{
+    margin: 0 0 10px 0;
+    display: flex;
+}
+#allnego .wrap .textPart dt{
+    width: 100px;
+}
+#allnego .wrap .textPart dd{
+    margin-bottom: 10px;
+}
+#allnego .wrap .textPart dd a{
+    color: white;
+}
+#allnego .wrap .viewPart {
+    margin-top: 20px;
+}
+#allnego .wrap .viewPart p{
+    margin-right: 40px;
+}
+
+/* portfolio niccier */
+#niccier .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#niccier .wrap .title h2{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 60px;
+    color: white;
+}
+#niccier .wrap .textPart,
+#niccier .wrap .viewPart {
+    color: white;
+    display: flex;
+}
+#niccier .wrap .textPart p,
+#niccier .wrap .viewPart p{
+    font-weight: bold;
+    margin-right: 40px;
+}
+#niccier .wrap .textPart dl{
+    margin: 0 0 10px 0;
+    display: flex;
+}
+#niccier .wrap .textPart dt{
+    width: 100px;
+}
+#niccier .wrap .textPart dd{
+    margin-bottom: 10px;
+}
+#niccier .wrap .textPart dd a{
+    color: white;
+}
+#niccier .wrap .viewPart {
+    margin-top: 20px;
+}
+#niccier .wrap .viewPart p{
+    margin-right: 40px;
+}
+
+/* portfolio roxtimer */
+#roxtimer .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#roxtimer .wrap .title h2{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 60px;
+    color: white;
+}
+#roxtimer .wrap .textPart,
+#roxtimer .wrap .viewPart {
+    color: white;
+    display: flex;
+}
+#roxtimer .wrap .textPart p,
+#roxtimer .wrap .viewPart p{
+    font-weight: bold;
+    margin-right: 40px;
+}
+#roxtimer .wrap .textPart dl{
+    margin: 0 0 10px 0;
+    display: flex;
+}
+#roxtimer .wrap .textPart dt{
+    width: 100px;
+}
+#roxtimer .wrap .textPart dd{
+    margin-bottom: 10px;
+}
+#roxtimer .wrap .textPart dd a{
+    color: white;
+}
+#roxtimer .wrap .viewPart {
+    margin-top: 20px;
+}
+#roxtimer .wrap .viewPart p{
+    margin-right: 40px;
+}
 
 /* contact */
 #contact{
@@ -498,16 +681,15 @@ section{
     min-width: 340px;
     width: 100%;
     margin: 0 auto;
-    /* padding: 20px; */
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 #contact h2{
     font-size: 60px;
     color: #fff;
     font-family: 'Edu VIC WA NT Beginner', cursive;
-    padding-bottom: 30px;
 }
 #contact fieldset{
     border: 1px solid #777;
