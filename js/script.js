@@ -75,7 +75,7 @@ const pageCarrer = {
                     <h2>Carrer</h2>
                 </div>    
                 <div class="carrerbox">
-                    <div class="rental">
+                    <div class="rental" style="'background-image: url(/img/logo/rentalfriend.png)'">
                         <div class="dark_border"></div>
                         <div class="dark_bg"></div>                        
                         <p>(주)렌탈프랜드<br>2022.08.08 ~ ing</p>
